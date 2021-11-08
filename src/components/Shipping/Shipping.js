@@ -11,10 +11,11 @@ const Shipping = () => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://dark-web-72390.herokuapp.com/net', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify(data)
         })
